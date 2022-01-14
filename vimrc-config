@@ -1,0 +1,36 @@
+#Some commands that i use in vim:
+#//Write the vim commands that delete all the words that contains 'c' in the file.
+#:%s/\bc\b//g 
+
+#//Write the vim commands that delete for each line that has the character '>' until end of line.
+#:%s/\>//g
+#
+#Vim commands to use for opening files.
+#add github copilot to vim
+#:source ~/.vim/bundle/copilot/copilot.vim
+
+
+#This is a vimrc file for my vim configuration.
+
+#Create a configuration for vim that has number line, relativenumber, fold, and syntax highlighting. [With copilot]
+syntax on
+set number
+set relativenumber
+set foldmethod=marker
+
+set nocompatible
+set backspace=indent,eol,start
+set autoindent
+set smartindent
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set smarttab
+set softtabstop=4
+set shiftround
+set textwidth=80
+set textwidth=80
+set foldlevel=99
+set foldmethod=indent
+set foldcolumn=0
+set foldenable
