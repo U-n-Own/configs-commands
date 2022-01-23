@@ -9,6 +9,10 @@
 #add github copilot to vim
 #:source ~/.vim/bundle/copilot/copilot.vim
 
+#If you want to delete from a certain line until end of file or another line:
+# <number_line_to_start (dot for current line)>,<number_line_to_delete>d [or $ for EOF as number_line_to_delete]
+
+
 
 #This is a vimrc file for my vim configuration.
 
