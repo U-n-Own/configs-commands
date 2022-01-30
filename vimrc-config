@@ -12,7 +12,30 @@
 #If you want to delete from a certain line until end of file or another line:
 # <number_line_to_start (dot for current line)>,<number_line_to_delete>d [or $ for EOF as number_line_to_delete]
 
+#Pasting in line mode 1
+#   a<c-r>"
+#   Feel free to map it. Eg, nnoremap <leader>p a<c-r>"
 
+
+#Pasting in line mode 2
+#    function! s:PasteInline(afterOrBefore)
+#        exe 'let s:myContent = @' . v:register
+#        let s:myContent = substitute(s:myContent, '^\s*', '', 'g')
+#        let s:myContent = substitute(s:myContent, '\s*\n', '\n', 'g')
+#        let s:myContent = substitute(s:myContent, '\n\s*', '\n', 'g')
+#        if count(s:myContent, "\n") > 1
+#            let s:myContent = substitute(s:myContent, '\n', ' ', 'g')
+#            let s:myContent = substitute(s:myContent, ' $', '', 'g')
+#        else
+#            let s:myContent = substitute(s:myContent, '\n', '', 'g')
+#        endif
+#        execute 'norm! ' . a:afterOrBefore . s:myContent
+#    endfunction
+#    nnoremap <expr><silent> gp ':call <SID>PasteInline("a")<CR>'
+#    nnoremap <expr><silent> gP ':call <SID>PasteInline("i")<CR>'
+#
+
+#TODO: Vim command to comment first n lines above with #
 
 #This is a vimrc file for my vim configuration.
 
